@@ -1,18 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: infra-common
+  name: openeuler
   namespace: argocd
 spec:
-  description: The project that holds all of the common service used by different communities
+  description: The project that holds all of the business service used by openEuler community
   clusterResourceWhitelist:
     - group: '*'
       kind: '*'
   destinations:
     - namespace: '*'
       server: https://kubernetes.default.svc
-    - namespace: '*'
-      server: https://159.138.41.5:5443
   sourceRepos:
-    - https://github.com/opensourceways/infra-common.git
+    - https://github.com/opensourceways/infra-openeuler.git
 

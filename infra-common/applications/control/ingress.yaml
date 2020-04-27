@@ -1,15 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: control-vault
+  name: control-ingress
   namespace: argocd
+  labels:
+    community: os-infra
 spec:
   destination:
-    namespace: vault
+    namespace: ingress-nginx
     server: https://kubernetes.default.svc
   project: infra-common
   source:
-    path: common-applications/control-vault
+    path: common-applications/control/ingress
     repoURL: https://github.com/opensourceways/infra-common.git
     targetRevision: HEAD
   syncPolicy:
