@@ -10,7 +10,6 @@ spec:
       kind: '*'
   destinations:
     - namespace: '*'
-      server: https://kubernetes.default.svc
+      server: https://159.138.41.5:5443
   sourceRepos:
     - https://github.com/opensourceways/infra-openeuler.git
-
