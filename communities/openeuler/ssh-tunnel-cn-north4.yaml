@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: openeuler-cn-north4-ssh-tunnel
+  namespace: argocd
+  labels:
+    community: openeuler-cn-north4
+spec:
+  destination:
+    namespace: ssh-tunnel
+    server: https://114.116.226.125:5443
+  project: openeuler
+  source:
+    path: applications/ssh-tunnel-cn-north4
+    repoURL: https://github.com/opensourceways/infra-openeuler.git
+    targetRevision: HEAD
