@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: mindspore
+  namespace: argocd
+spec:
+  description: The project that holds all of the business service used by MindSpore community
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
+  destinations:
+    - namespace: '*'
+      server: https://114.115.223.130:5443
+  sourceRepos:
+    - https://github.com/opensourceways/infra-mindspore.git
