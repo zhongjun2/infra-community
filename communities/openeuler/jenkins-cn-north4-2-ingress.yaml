@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: openeuler-hk-jenkins2
+  namespace: argocd
+  labels:
+    community: openeuler-hk
+spec:
+  destination:
+    namespace: ssh-tunnel
+    server: https://159.138.41.5:5443
+  project: openeuler
+  source:
+    path: applications/jenkins-cn-north4-2-ingress
+    repoURL: https://github.com/opensourceways/infra-openeuler.git
+    targetRevision: HEAD

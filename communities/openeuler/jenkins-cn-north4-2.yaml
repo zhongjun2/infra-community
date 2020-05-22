@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: openeuler-cn-north4-jenkins-2
+  namespace: argocd
+  labels:
+    community: openeuler-cn-north4
+spec:
+  destination:
+    namespace: jenkins
+    server: https://114.116.226.125:5443
+  project: openeuler
+  source:
+    path: applications/jenkins-cn-north4-2
+    repoURL: https://github.com/opensourceways/infra-openeuler.git
+    targetRevision: HEAD
