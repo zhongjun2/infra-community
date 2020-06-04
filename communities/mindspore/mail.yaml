@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: mindspore-mail
+  namespace: argocd
+  labels:
+    community: mindspore-cn-north4
+spec:
+  destination:
+    namespace: mail
+    server: https://114.115.223.130:5443
+  project: mindspore
+  source:
+    path: applications/mail
+    repoURL: https://github.com/opensourceways/infra-mindspore.git
+    targetRevision: HEAD
