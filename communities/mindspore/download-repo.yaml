@@ -6,7 +6,7 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-options: Validate=false
   labels:
-    community: mindspore-cn-north4
+    community: mindspore-cn-north1
 spec:
   destination:
     namespace: download

@@ -4,7 +4,7 @@ metadata:
   name: mindspore-mail
   namespace: argocd
   labels:
-    community: mindspore-cn-north4
+    community: mindspore-cn-north1
 spec:
   destination:
     namespace: mail
