@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: openeuler-cn-north4-master-dailybuild
+  name: openeuler-hk-dailybuild-ingress
   namespace: argocd
   labels:
-    community: openeuler-cn-north4
+    community: openeuler-hk
 spec:
   destination:
     namespace: dailybuild
-    server: https://114.116.226.125:5443
+    server: https://159.138.41.5:5443
   project: openeuler
   source:
-    path: applications/repo-dailybuild-master
+    path: applications/hk-dailybuild-ingress
     repoURL: https://github.com/opensourceways/infra-openeuler.git
     targetRevision: HEAD

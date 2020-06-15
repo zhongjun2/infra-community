@@ -17,9 +17,11 @@ The repo holds all of the applications running for different communities
 | Name | Community | Region | API endpoints |
 | :---:| :----: | :----: | :----: |
 | os-infra | None | HongKong | 119.8.122.167(https://kubernetes.default.svc) |
-| mindspore | MindSpore | Beijing | 114.115.223.130 |
+| mindspore-cn-north1 | MindSpore | Beijing | 114.115.223.130 |
 | mindspore-hk | MindSpore | HongKong | 119.8.45.34 |
 | openeuler-cn-north4 | openEuler | Beijing4 | 114.116.226.125|
 | openeuler-hk | openEuler | HongKong | 159.138.41.5 |
 | openlookeng-hk | openLooKeng | HongKong | 159.138.57.217 |
+| mindspore-cn-north4 | MindSpore | Beijing | 114.116.199.235 |
+| mindspore-cn-north4(arm) | MindSpore | Beijing | 121.36.22.144 |
 
