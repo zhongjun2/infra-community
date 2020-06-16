@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: openlookeng-etherpad
+  namespace: argocd
+  labels:
+    community: openlookeng
+spec:
+  destination:
+    namespace: etherpad
+    server: https://159.138.41.5:5443
+  project: openlookeng
+  source:
+    path: applications/openlookeng-etherpad
+    repoURL: https://github.com/opensourceways/infra-openeuler.git
+    targetRevision: HEAD

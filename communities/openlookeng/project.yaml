@@ -11,5 +11,8 @@ spec:
   destinations:
     - namespace: '*'
       server: https://159.138.57.217:5443
+    - namespace: '*'
+      server: https://159.138.41.5:5443
   sourceRepos:
     - https://github.com/opensourceways/infra-openlookeng.git
+    - https://github.com/opensourceways/infra-openeuler.git
