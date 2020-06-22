@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: openlookeng-mail
+  namespace: argocd
+  labels:
+    community: openlookeng
+spec:
+  destination:
+    namespace: mail
+    server: https://159.138.57.217:5443
+  project: openlookeng
+  source:
+    path: applications/jenkins
+    repoURL: https://github.com/opensourceways/infra-openlookeng.git
+    targetRevision: HEAD
+
