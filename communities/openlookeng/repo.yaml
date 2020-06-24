@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: openlookeng-repo
+  namespace: argocd
+  labels:
+    community: openlookeng
+spec:
+  destination:
+    namespace: repo
+    server: https://159.138.57.217:5443
+  project: openlookeng
+  source:
+    path: applications/repo
+    repoURL: https://github.com/opensourceways/infra-openlookeng.git
+    targetRevision: HEAD
