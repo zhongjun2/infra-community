@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: openlookeng-tryme-test-ingress
+  namespace: argocd
+  labels:
+    community: openeuler-hk
+spec:
+  destination:
+    namespace: openlookeng-tryme-test
+    server: https://159.138.41.5:5443
+  project: openeuler
+  source:
+    path: applications/openlookeng-tryme-test
+    repoURL: https://github.com/opensourceways/infra-openeuler.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
