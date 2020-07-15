@@ -23,6 +23,8 @@ spec:
       server: https://114.115.223.130:5443
     - namespace: '*'
       server: https://114.116.199.235:5443
+    - namespace: '*'
+      server: https://159.138.3.92:5443
   sourceRepos:
     - https://github.com/opensourceways/infra-common.git
 

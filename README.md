@@ -12,7 +12,6 @@ The repo holds all of the applications running for different communities
 | MindSpore | BeiJing4 | vpc-a0c1(192.168.0.0/16) | subnet-a105(192.168.0.0/24) | mindspore-x86-slaves | 172.16.0.0/16 |
 | MindSpore | BeiJing4 | vpc-a0c1(192.168.0.0/16) | subnet-a105(192.168.0.0/24) | mindspore-arm-slaves | 172.16.0.0/16 |
 | openLookeng | HongKong | vpc-lookeng-community(10.0.0.0/24) | subnet-4273(10.0.0.0/24) | cce-openlookeng | 172.21.0.0/16 |
-
 # Kubernetes Cluster API endpoints
 | Name | Community | Region | API endpoints |
 | :---:| :----: | :----: | :----: |
@@ -22,6 +21,6 @@ The repo holds all of the applications running for different communities
 | openeuler-cn-north4 | openEuler | Beijing4 | 114.116.226.125|
 | openeuler-hk | openEuler | HongKong | 159.138.41.5 |
 | openlookeng-hk | openLooKeng | HongKong | 159.138.57.217 |
+| openlookeng-tryme | openLooKeng | HongKong | 159.138.3.92 |
 | mindspore-cn-north4 | MindSpore | Beijing | 114.116.199.235 |
 | mindspore-cn-north4(arm) | MindSpore | Beijing | 121.36.22.144 |
-
