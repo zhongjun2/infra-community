@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: pytorch
+  namespace: argocd
+spec:
+  description: The project that holds all of the business service used by pytorch community
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
+  destinations:
+    - namespace: '*'
+      server: https://124.70.9.107:5443
+  sourceRepos:
+    - https://github.com/opensourceways/infra-pytorch.git
