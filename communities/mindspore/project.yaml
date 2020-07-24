@@ -13,5 +13,7 @@ spec:
       server: https://114.115.223.130:5443
     - namespace: '*'
       server: https://114.116.199.235:5443
+    - namespace: '*'
+      server: https://121.36.22.144:5443
   sourceRepos:
     - https://github.com/opensourceways/infra-mindspore.git

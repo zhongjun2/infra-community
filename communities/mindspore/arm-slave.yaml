@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: mindspore-arm-slave
+  namespace: argocd
+  labels:
+    community: mindspore-cn-north4
+spec:
+  destination:
+    namespace: jenkins
+    server: https://121.36.22.144:5443
+  project: mindspore
+  source:
+    path: applications/jenkins-arm-slave
+    repoURL: https://github.com/opensourceways/infra-mindspore.git
+    targetRevision: HEAD
