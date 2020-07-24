@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: pytorch-dailybuild
+  namespace: argocd
+  labels:
+    community: pytorch
+spec:
+  destination:
+    namespace: dailybuild
+    server: https://124.70.9.107:5443
+  project: pytorch
+  source:
+    path: applications/dailybuild
+    repoURL: https://github.com/opensourceways/infra-pytorch.git
+    targetRevision: HEAD
