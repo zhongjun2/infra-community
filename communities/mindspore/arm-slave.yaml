@@ -14,3 +14,6 @@ spec:
     path: applications/jenkins-arm-slave
     repoURL: https://github.com/opensourceways/infra-mindspore.git
     targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: false

@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: mindspore-x86-slave
+  name: mindspore-hk-x86-slave
   namespace: argocd
   labels:
-    community: mindspore-cn-north4
+    community: mindspore-hk
 spec:
   destination:
     namespace: jenkins
-    server: https://114.116.199.235:5443
+    server: https://119.8.45.34:5443
   project: mindspore
   source:
-    path: applications/jenkins-x86-slave
+    path: applications/jenkins-x86-slave-hk
     repoURL: https://github.com/opensourceways/infra-mindspore.git
     targetRevision: HEAD
   syncPolicy:
