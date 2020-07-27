@@ -11,7 +11,7 @@ spec:
     server: https://kubernetes.default.svc
   project: infra-common
   source:
-    path: common-applications/control/om-grafana
+    path: common-applications/om/grafana
     repoURL: https://github.com/opensourceways/infra-common.git
     targetRevision: HEAD
   syncPolicy:
