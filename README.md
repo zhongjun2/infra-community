@@ -26,3 +26,5 @@ The repo holds all of the applications running for different communities
 | mindspore-cn-north4 | MindSpore | Beijing | 114.116.199.235 |
 | mindspore-cn-north4(arm) | MindSpore | Beijing | 121.36.22.144 |
 | Pytorch(x86) | pytorch | Beijing4 | 124.70.9.107 |
+| omcluster | None | HongKong | 119.8.126.189 |
+
