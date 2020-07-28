@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: om
+  namespace: om
+spec:
+  description: The project that holds all of the business service used by om
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
+  destinations:
+    - namespace: '*'
+      server: https://119.8.126.189:5443
+  sourceRepos:
+    - https://github.com/opensourceways/infra-common.git

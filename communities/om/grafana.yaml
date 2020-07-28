@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: om-grafana
+  namespace: om
+  labels:
+    community: om
+spec:
+  destination:
+    namespace: om
+    server: https://119.8.126.189:5443
+  project: om
+  source:
+    path: common-applications/om/grafana
+    repoURL: https://github.com/opensourceways/infra-common.git
+    targetRevision: HEAD
