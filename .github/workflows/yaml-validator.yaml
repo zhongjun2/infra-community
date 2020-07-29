@@ -1,0 +1,27 @@
+on: [push, pull_request]
+
+env:
+  KUBECONFIG: .kube/config
+  KUBECONFIG_FILE: ${{ secrets.KUBECONFIG }}
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          mkdir -p .kube
+          echo "${{ env.KUBECONFIG_FILE }}" > $KUBECONFIG
+      - uses: actions/checkout@v1
+      - name: Validate kustomization
+        uses: stefanprodan/kube-tools@master
+        with:
+          # https://github.com/fluxcd/flux/blob/master/docker/kubectl.version
+          kubectl: 1.14.7
+          # https://github.com/fluxcd/flux/blob/master/docker/kustomize.version
+          kustomize: 3.2.3
+          # https://github.com/fluxcd/helm-operator/blob/master/docker/helm.version
+          # helm: 2.14.3
+          command: |
+            #!/bin/bash
+            kubectl apply -f ./communities -R --dry-run
+            kubectl apply -f ./infra-common -R --dry-run
