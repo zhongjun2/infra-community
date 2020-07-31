@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: pytorch-jenkins-x86-slaves
+  namespace: argocd
+  labels:
+    community: pytorch
+spec:
+  destination:
+    namespace: jenkins-slave
+    server: https://124.70.9.107:5443
+  project: pytorch
+  source:
+    path: applications/jenkins-x86-slave
+    repoURL: https://github.com/opensourceways/infra-pytorch.git
+    targetRevision: HEAD
