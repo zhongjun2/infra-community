@@ -14,3 +14,6 @@ spec:
     path: applications/jenkins-x86-slave
     repoURL: https://github.com/opensourceways/infra-pytorch.git
     targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: false
