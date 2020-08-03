@@ -1,5 +1,5 @@
 # infra-community
-The repo holds all of the applications running for different communities
+The repo holds all of the applications running for different communities.
 
 # Network Topo for communities
 
