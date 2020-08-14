@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: control-om-grafana-ingress
+  namespace: argocd
+  labels:
+    community: os-infra
+spec:
+  destination:
+    namespace: om
+    server: https://kubernetes.default.svc
+  project: infra-common
+  source:
+    path: common-applications/control/om-grafana-ingress
+    repoURL: https://github.com/opensourceways/infra-common.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: false
