@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: openlookeng-api-ingress
+  namespace: argocd
+  labels:
+    community: openeuler-hk
+spec:
+  destination:
+    namespace: openlookeng-api
+    server: https://159.138.41.5:5443
+  project: openeuler
+  source:
+    path: applications/openlookeng-api-ingress
+    repoURL: https://github.com/opensourceways/infra-openeuler.git
+    targetRevision: HEAD
