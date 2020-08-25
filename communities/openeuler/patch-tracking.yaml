@@ -11,7 +11,7 @@ spec:
     server: https://159.138.41.5:5443
   project: openeuler
   source:
-    path: applications/app-patchtracking
+    path: applications/patch-tracking
     repoURL: https://github.com/opensourceways/infra-openeuler.git
     targetRevision: HEAD
   syncPolicy:
