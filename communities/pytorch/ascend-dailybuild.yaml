@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ascend-dailybuild
+  namespace: argocd
+  labels:
+    community: pytorch
+spec:
+  destination:
+    namespace: ascend-dailybuild
+    server: https://124.70.9.107:5443
+  project: pytorch
+  source:
+    path: applications/ascend-build
+    repoURL: https://github.com/opensourceways/infra-pytorch.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: false
