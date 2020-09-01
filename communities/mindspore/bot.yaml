@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: mindspore-cn-north4-bot
+  namespace: argocd
+  labels:
+    community: mindspore-cn-north4
+spec:
+  destination:
+    namespace: bot
+    server: https://114.116.199.235:5443
+  project: mindspore
+  source:
+    path: applications/bot
+    repoURL: https://github.com/opensourceways/infra-mindspore.git
+    targetRevision: HEAD
