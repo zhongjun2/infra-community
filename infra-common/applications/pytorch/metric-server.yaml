@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: pytorch-cn-north4-server
+  namespace: argocd
+  labels:
+    community: pytorch-cn-north4
+spec:
+  destination:
+    namespace: kube-system
+    server: https://124.70.9.107:5443
+  project: infra-common
+  source:
+    path: common-applications/control/metrics-server-x86
+    repoURL: https://github.com/opensourceways/infra-common.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true

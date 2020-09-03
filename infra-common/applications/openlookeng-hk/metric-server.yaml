@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: openlookeng-hk-server
+  namespace: argocd
+  labels:
+    community: openlookeng-hk
+spec:
+  destination:
+    namespace: kube-system
+    server: https://159.138.57.217:5443
+  project: infra-common
+  source:
+    path: common-applications/control/metrics-server-x86
+    repoURL: https://github.com/opensourceways/infra-common.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true

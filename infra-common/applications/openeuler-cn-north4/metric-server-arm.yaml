@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: openeuler-cn-north4-arm-metric-server
+  namespace: argocd
+  labels:
+    community: openeuler-cn-north4
+spec:
+  destination:
+    namespace: kube-system
+    server: https://119.3.172.226:5443
+  project: infra-common
+  source:
+    path: common-applications/control/metrics-server-aarch64
+    repoURL: https://github.com/opensourceways/infra-common.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true

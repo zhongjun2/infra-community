@@ -20,6 +20,7 @@ The repo holds all of the applications running for different communities.
 | mindspore-cn-north1 | MindSpore | Beijing | 114.115.223.130 |
 | mindspore-hk | MindSpore | HongKong | 119.8.45.34 |
 | openeuler-cn-north4 | openEuler | Beijing4 | 114.116.226.125|
+| openeuelr-cn-north4(arm) | openEuler | Beijing4 | 119.3.172.226 |
 | openeuler-hk | openEuler | HongKong | 159.138.41.5 |
 | openlookeng-hk | openLooKeng | HongKong | 159.138.57.217 |
 | openlookeng-tryme | openLooKeng | HongKong | 159.138.3.92 |
