@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: openeuler-hk-server
+  name: openeuler-hk-metric-server
   namespace: argocd
   labels:
     community: openeuler-hk

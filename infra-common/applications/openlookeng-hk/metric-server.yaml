@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: openlookeng-hk-server
+  name: openlookeng-hk-metric-server
   namespace: argocd
   labels:
     community: openlookeng-hk
