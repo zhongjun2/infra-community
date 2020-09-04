@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: edgegallery-om
+  namespace: argocd
+  labels:
+    community: os-infra
+spec:
+  destination:
+    namespace: edgegallery-om
+    server: https://119.8.126.189:5443
+  project: infra-common
+  source:
+    path: common-applications/om/om-collect/edgegallery
+    repoURL: https://github.com/opensourceways/infra-common.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
