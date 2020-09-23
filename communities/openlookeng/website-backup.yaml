@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: openlookeng-website-backup
+  namespace: argocd
+  labels:
+    community: openlookeng
+spec:
+  destination:
+    namespace: website
+    server: infra-singapore-x86-external 
+  project: openlookeng
+  source:
+    path: applications/website
+    repoURL: https://github.com/opensourceways/infra-openlookeng.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
