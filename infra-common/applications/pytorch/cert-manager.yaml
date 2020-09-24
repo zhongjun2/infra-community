@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: pytorch-cn-north4-cert-manager
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-options: Validate=false
+  labels:
+    community: pytorch-cn-north4
+spec:
+  destination:
+    namespace: cert-manager
+    server: https://124.70.9.107:5443
+  project: infra-common
+  source:
+    path: common-applications/control/cert-manager
+    repoURL: https://github.com/opensourceways/infra-common.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
