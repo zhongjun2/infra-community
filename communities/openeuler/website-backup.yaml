@@ -4,14 +4,14 @@ metadata:
   name: openeuler-website-backup
   namespace: argocd
   labels:
-    community: openeuler-hk
+    community: openeuler-singapore
 spec:
   destination:
     namespace: website-v2
     server: https://119.8.174.163:5443 
   project: openeuler
   source:
-    path: applications/openeuler-website-v2
+    path: applications/openeuler-website-backup
     repoURL: https://github.com/opensourceways/infra-openeuler.git
     targetRevision: HEAD
   syncPolicy:
