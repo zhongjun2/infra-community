@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: openeuler-hk-website-backup
+  name: openeuler-website-backup
   namespace: argocd
   labels:
     community: openeuler-hk
