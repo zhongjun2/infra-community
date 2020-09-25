@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: openeuler-om
+  namespace: argocd
+  labels:
+    community: os-infra
+spec:
+  destination:
+    namespace: openeuler-om
+    server: https://159.138.41.5:5443
+  project: infra-common
+  source:
+    path: common-applications/om/om-collect/cla/openeuler
+    repoURL: https://github.com/opensourceways/infra-common.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
