@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: mindspore-om
+  name: mindspore-cla-om
   namespace: argocd
   labels:
     community: os-infra
