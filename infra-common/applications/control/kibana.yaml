@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: control-kibana
+  namespace: argocd
+  labels:
+    community: os-infra
+spec:
+  destination:
+    namespace: kibana
+    server: https://kubernetes.default.svc
+  project: infra-common
+  source:
+    path: common-applications/control/kibana
+    repoURL: https://github.com/opensourceways/infra-common.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
