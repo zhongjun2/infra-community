@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: control-argo
+  namespace: argocd
+  labels:
+    community: os-infra
+spec:
+  destination:
+    namespace: argocd
+    server: https://kubernetes.default.svc
+  project: infra-common
+  source:
+    path: common-applications/control/argocd
+    repoURL: https://github.com/opensourceways/infra-common.git
+    targetRevision: HEAD
