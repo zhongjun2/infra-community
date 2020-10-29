@@ -8,7 +8,7 @@ metadata:
 spec:
   destination:
     namespace: mindspore-om
-    server: https://119.8.45.34:5443
+    server: https://114.116.199.235:5443
   project: infra-common
   source:
     path: common-applications/om/om-collect/cla/mindspore
