@@ -5,6 +5,8 @@ metadata:
   namespace: argocd
   labels:
     community: os-infra
+  annotations:
+    recipients.argocd-notifications.argoproj.io: email:tommylikehu@gmail.com
 spec:
   destination:
     namespace: monitoring
