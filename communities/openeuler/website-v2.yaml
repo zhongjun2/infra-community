@@ -5,6 +5,8 @@ metadata:
   namespace: argocd
   labels:
     community: openeuler-hk
+  annotations:
+    recipients.argocd-notifications.argoproj.io: email:zhengyuhang@huawei.com
 spec:
   destination:
     namespace: website-v2

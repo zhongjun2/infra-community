@@ -1,19 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: mindspore-api-ingress
+  name: mindspore-jenkins
   namespace: argocd
   labels:
     community: mindspore-cn-north1
 spec:
   destination:
-    namespace: mindspore-api
+    namespace: jenkins
     server: https://114.115.223.130:5443
   project: mindspore
   source:
-    path: applications/api-ingress
+    path: applications/jenkins
     repoURL: https://github.com/opensourceways/infra-mindspore.git
     targetRevision: HEAD
-  syncPolicy:
-    automated:
-      prune: true
