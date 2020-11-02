@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: mindspore-hk-prow
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-options: Validate=false
+  labels:
+    community: mindspore-hk
+spec:
+  destination:
+    namespace: prow
+    server: https://119.8.45.34:5443
+  project: mindspore
+  source:
+    path: applications/prow
+    repoURL: https://github.com/opensourceways/infra-mindspore.git
+    targetRevision: HEAD
