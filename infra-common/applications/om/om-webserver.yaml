@@ -8,10 +8,10 @@ metadata:
 spec:
   destination:
     namespace: om
-    name: om-external
+    server: https://119.8.126.189:5443
   project: infra-common
   source:
-    path: common-applications/om/om-webserver
+    path: common-applications/om/webserver
     repoURL: https://github.com/opensourceways/infra-common.git
     targetRevision: HEAD
   syncPolicy:
