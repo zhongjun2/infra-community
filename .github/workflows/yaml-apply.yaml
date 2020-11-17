@@ -26,5 +26,7 @@ jobs:
           # helm: 2.14.3
           command: |
             #!/bin/bash
+            apt-get install -y python3
+            python3 ./util/check_cluster.py
             kubectl apply -f ./communities -R
             kubectl apply -f ./infra-common -R
