@@ -79,19 +79,16 @@ def check_project_yaml(file_path, cluster_names):
         for i in content['spec']['destinations']:
             server = i['server'] if 'server' in i else ''
             name = i['name'] if 'name' in i else ''
-            if server:
-                print('{}: Please use name instead of server to configure the destination cluster!'.format(file_path))
+            if server or not name:
+                print('[Project Error] {0}: Please use name instead of server to configure the destination clusters!'.format(file_path))
                 errors += 1
             if name:
                 name_list.append(name)
         if name_list:
             for name in name_list:
                 if name not in cluster_names:
-                    print('{0}: {1} found in {0} not in cluster names'.format(file_path, name))
+                    print('[Project Error] {0}: Cluster Name {1} not found in our cluster names'.format(file_path, name))
                     errors += 1
-        else:
-            print('{}: Please use name instead of server to configure the destination cluster!'.format(file_path))
-            errors += 1
     return errors
 
 
@@ -107,14 +104,11 @@ def check_application_yaml(file_path, cluster_names):
         content = yaml.load(fp.read(), Loader=yaml.FullLoader)
         server = content['spec']['destination']['server'] if 'server' in content['spec']['destination'] else ''
         name = content['spec']['destination']['name'] if 'name' in content['spec']['destination'] else ''
-        if server:
-            print('{}: Please use name instead of server to configure the destination cluster!'.format(file_path))
-            errors += 1
-        if not name:
-            print('{}: Please use name instead of server to configure the destination cluster!'.format(file_path))
+        if server or not name:
+            print("[Application Error] {0}: Please use name instead of server to configure the destination cluster!".format(file_path))
             errors += 1
         elif name not in cluster_names:
-            print('{0}: {1} found in {0} not in cluster names'.format(file_path, name))
+            print('[Application Error] {0}: Cluster Name {1} not found in our cluster names'.format(file_path, name))
             errors += 1
     return errors
 
@@ -127,12 +121,9 @@ if __name__ == '__main__':
     yaml_files = get_files()
 
     # 3.分类对yaml作内容检查
-    number = 0
     for yaml_file in yaml_files:
         if yaml_file.split('/')[-1] == 'project.yaml':
-            errors = check_project_yaml(yaml_file, cluster_names)
-            number += errors
+            check_project_yaml(yaml_file, cluster_names)
         else:
-            errors = check_application_yaml(yaml_file, cluster_names)
-            #number += errors
-    sys.exit(number)
+            check_application_yaml(yaml_file, cluster_names)
+    sys.exit(-1)
