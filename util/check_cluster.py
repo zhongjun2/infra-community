@@ -80,7 +80,7 @@ def check_project_yaml(file_path, cluster_names):
             server = i['server'] if 'server' in i else ''
             name = i['name'] if 'name' in i else ''
             if server or not name:
-                print('[Project Error] {0}: Please use name instead of server to configure the destination clusters!'.format(file_path))
+                print('[Project Error] {0}: Please use name instead of server to configure the destination clusters, found {1} {2} !'.format(file_path, server, name))
                 errors += 1
             if name:
                 name_list.append(name)
@@ -105,7 +105,7 @@ def check_application_yaml(file_path, cluster_names):
         server = content['spec']['destination']['server'] if 'server' in content['spec']['destination'] else ''
         name = content['spec']['destination']['name'] if 'name' in content['spec']['destination'] else ''
         if server or not name:
-            print("[Application Error] {0}: Please use name instead of server to configure the destination cluster!".format(file_path))
+            print("[Application Error] {0}: Please use name instead of server to configure the destination cluster, found {1} {2}!".format(file_path, server, name))
             errors += 1
         elif name not in cluster_names:
             print('[Application Error] {0}: Cluster Name {1} not found in our cluster names'.format(file_path, name))
