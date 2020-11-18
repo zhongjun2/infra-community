@@ -23,14 +23,5 @@ jobs:
           # helm: 2.14.3
           command: |
             #!/bin/bash
-            apt-get install -y python3 >/dev/null
-            pip3 install -r ./util/requirement.txt >/dev/null
-            python3 ./util/check_cluster.py
-            if [ $? -eq 0 ];then
-                echo "SUCCESS"
-            else
-                echo "FAILED"
-                exit 1
-            fi
             kubectl apply -f ./communities -R --dry-run
             kubectl apply -f ./infra-common -R --dry-run
