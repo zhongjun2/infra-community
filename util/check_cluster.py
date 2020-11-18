@@ -12,10 +12,8 @@ def get_session():
     :return: token
     """
     url = 'https://build.osinfra.cn/api/v1/session'
-    #username = os.getenv('ARGOCD_USERNAME', '')
-    #password = os.getenv('ARGOCD_PASSWORD', '')
-    username = 'admin'
-    password = 'opensource1234!@#$'
+    username = os.getenv('ARGOCD_USERNAME', '')
+    password = os.getenv('ARGOCD_PASSWORD', '')
     if not username or not password:
         print('Both username and password are required to get token.')
         print('Missing username or password,exit...')
