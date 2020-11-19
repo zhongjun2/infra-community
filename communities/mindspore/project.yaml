@@ -11,11 +11,15 @@ spec:
   destinations:
     - namespace: '*'
       server: https://114.115.223.130:5443
+      name: mindspore-external
     - namespace: '*'
       server: https://114.116.199.235:5443
+      name: cn-north-4-x86-external
     - namespace: '*'
       server: https://121.36.22.144:5443
+      name: cn-north-4-external
     - namespace: '*'
       server: https://119.8.45.34:5443
+      name: mindspore-hk-external
   sourceRepos:
     - https://github.com/opensourceways/infra-mindspore.git

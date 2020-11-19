@@ -10,10 +10,13 @@ spec:
       kind: '*'
   destinations:
     - namespace: '*'
+      name: openeuler-external
       server: https://159.138.41.5:5443
     - namespace: '*'
+      name: openeuler-cn-north4
       server: https://114.116.226.125:5443
     - namespace: '*'
+      name: infra-singapore-x86-external
       server: https://119.8.174.163:5443
   sourceRepos:
     - https://github.com/opensourceways/infra-openeuler.git
