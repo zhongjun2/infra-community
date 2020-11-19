@@ -8,7 +8,7 @@ metadata:
 spec:
   destination:
     namespace: dailybuild-lts
-    server: https://114.116.226.125:5443
+    name: openeuler-cn-north4
   project: openeuler
   source:
     path: applications/repo-dailybuild-lts

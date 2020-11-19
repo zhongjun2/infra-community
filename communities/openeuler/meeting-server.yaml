@@ -8,7 +8,7 @@ metadata:
 spec:
   destination:
     namespace: meetingserver
-    server: https://159.138.41.5:5443
+    name: openeuler-external
   project: openeuler
   source:
     path: applications/meeting-server
