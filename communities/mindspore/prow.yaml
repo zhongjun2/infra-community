@@ -10,7 +10,7 @@ metadata:
 spec:
   destination:
     namespace: prow
-    server: https://119.8.45.34:5443
+    name: mindspore-hk-external
   project: mindspore
   source:
     path: applications/prow
