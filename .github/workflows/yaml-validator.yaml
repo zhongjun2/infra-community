@@ -5,7 +5,7 @@ env:
   KUBECONFIG_FILE: ${{ secrets.KUBECONFIG }}
 
 jobs:
-  validate:
+  validate_yaml:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1

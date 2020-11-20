@@ -4,7 +4,7 @@ env:
   ARGOCD_USERNAME: ${{ secrets.ARGOCD_USERNAME }}
   ARGOCD_PASSWORD: ${{ secrets.ARGOCD_PASSWORD }}
 jobs:
-  validate:
+  validate_cluster:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
