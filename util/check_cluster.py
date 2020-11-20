@@ -79,10 +79,10 @@ def check_project_yaml(file_path, cluster_names):
         for i in content['spec']['destinations']:
             server = i['server'] if 'server' in i else ''
             name = i['name'] if 'name' in i else ''
-            if server or not name:
-                print('[Project Error] {0}: Please use name instead of server to configure the destination clusters, found {1} {2} !'.format(file_path, server, name))
+            if not server or not name:
+                print('[Project Error] {0}: Please both specify name and server to configure the destination clusters in project, found {1} {2} !'.format(file_path, server, name))
                 errors += 1
-            if name:
+            elif name:
                 name_list.append(name)
         if name_list:
             for name in name_list:
