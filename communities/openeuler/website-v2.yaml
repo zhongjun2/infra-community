@@ -10,7 +10,7 @@ metadata:
 spec:
   destination:
     namespace: website-v2
-    server: https://159.138.41.5:5443
+    name: openeuler-external
   project: openeuler
   source:
     path: applications/openeuler-website-v2

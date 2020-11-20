@@ -8,7 +8,7 @@ metadata:
 spec:
   destination:
     namespace: jenkins
-    server: https://114.116.226.125:5443
+    name: openeuler-cn-north4
   project: openeuler
   source:
     path: applications/jenkins-cn-north4-2
