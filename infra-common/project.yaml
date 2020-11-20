@@ -11,30 +11,43 @@ spec:
   destinations:
     - namespace: '*'
       server: https://kubernetes.default.svc
+      name: in-cluster
     - namespace: '*'
       server: https://159.138.41.5:5443
+      name: openeuler-external
     - namespace: '*'
       server: https://114.116.226.125:5443
+      name: openeuler-cn-north4
     - namespace: '*'
       server: https://159.138.57.217:5443
+      name: openlookeng-external
     - namespace: '*'
       server: https://119.8.45.34:5443
+      name: mindspore-hk-external
     - namespace: '*'
       server: https://114.115.223.130:5443
+      name: mindspore-external
     - namespace: '*'
       server: https://114.116.199.235:5443
+      name: cn-north-4-x86-external
     - namespace: '*'
       server: https://159.138.3.92:5443
+      name: openlookeng-tryme-test-external
     - namespace: '*'
       server: https://124.70.9.107:5443
+      name: pytorch-external
     - namespace: '*'
       server: https://119.8.126.189:5443
+      name: om-external
     - namespace: '*'
       server: https://119.3.172.226:5443
+      name: openeuler-cn-north4-arm-cluster
     - namespace: '*'
       server: https://121.36.22.144:5443
+      name: cn-north-4-external
     - namespace: '*'
       server: https://119.8.174.163:5443
+      name: infra-singapore-x86-external
   sourceRepos:
     - https://github.com/opensourceways/infra-common.git
 

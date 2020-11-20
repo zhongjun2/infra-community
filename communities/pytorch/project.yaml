@@ -11,5 +11,6 @@ spec:
   destinations:
     - namespace: '*'
       server: https://124.70.9.107:5443
+      name: pytorch-external
   sourceRepos:
     - https://github.com/opensourceways/infra-pytorch.git

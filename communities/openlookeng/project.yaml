@@ -11,10 +11,13 @@ spec:
   destinations:
     - namespace: '*'
       server: https://159.138.57.217:5443
+      name: openlookeng-external
     - namespace: '*'
       server: https://159.138.41.5:5443
+      name: openeuler-external
     - namespace: '*'
       server: https://119.8.174.163:5443
+      name: infra-singapore-x86-external
   sourceRepos:
     - https://github.com/opensourceways/infra-openlookeng.git
     - https://github.com/opensourceways/infra-openeuler.git
