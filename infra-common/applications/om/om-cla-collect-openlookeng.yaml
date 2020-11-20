@@ -8,7 +8,7 @@ metadata:
 spec:
   destination:
     namespace: openlookeng-om
-    server: https://159.138.57.217:5443
+    name: openlookeng-external
   project: infra-common
   source:
     path: common-applications/om/om-collect/cla/openlookeng

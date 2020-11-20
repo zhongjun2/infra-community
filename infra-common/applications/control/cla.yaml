@@ -8,7 +8,7 @@ metadata:
 spec:
   destination:
     namespace: cla
-    server: https://kubernetes.default.svc
+    name: in-cluster
   project: infra-common
   source:
     path: common-applications/control/cla
