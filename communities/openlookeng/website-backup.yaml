@@ -8,7 +8,7 @@ metadata:
 spec:
   destination:
     namespace: website
-    server: https://119.8.174.163:5443
+    name: infra-singapore-x86-external
   project: openlookeng
   source:
     path: applications/website
