@@ -121,9 +121,13 @@ if __name__ == '__main__':
     yaml_files = get_files()
 
     # 3.分类对yaml作内容检查
+    failed = False
     for yaml_file in yaml_files:
         if yaml_file.split('/')[-1] == 'project.yaml':
-            check_project_yaml(yaml_file, cluster_names)
+            if check_project_yaml(yaml_file, cluster_names):
+                failed = True
         else:
-            check_application_yaml(yaml_file, cluster_names)
-    sys.exit(-1)
+            if check_application_yaml(yaml_file, cluster_names):
+                failed = True
+    sys.exit(failed)
+
