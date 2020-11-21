@@ -8,7 +8,7 @@ metadata:
 spec:
   destination:
     namespace: om
-    server: https://119.8.126.189:5443
+    name: om-external
   project: infra-common
   source:
     path: common-applications/om/grafana
