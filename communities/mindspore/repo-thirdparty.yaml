@@ -10,7 +10,7 @@ metadata:
 spec:
   destination:
     namespace: repo-thridparty
-    server: https://114.115.223.130:5443
+    name: mindspore-external
   project: mindspore
   source:
     path: applications/repo-thirdparty

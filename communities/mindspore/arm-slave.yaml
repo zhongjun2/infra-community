@@ -8,7 +8,7 @@ metadata:
 spec:
   destination:
     namespace: jenkins
-    server: https://121.36.22.144:5443
+    name: cn-north-4-external
   project: mindspore
   source:
     path: applications/jenkins-arm-slave

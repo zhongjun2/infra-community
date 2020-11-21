@@ -8,7 +8,7 @@ metadata:
 spec:
   destination:
     namespace: jenkins
-    server: https://114.116.199.235:5443
+    name: cn-north-4-x86-external
   project: mindspore
   source:
     path: applications/jenkins-x86-slave
