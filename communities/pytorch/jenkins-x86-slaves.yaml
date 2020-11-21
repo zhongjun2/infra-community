@@ -8,7 +8,7 @@ metadata:
 spec:
   destination:
     namespace: jenkins-slave
-    server: https://124.70.9.107:5443
+    name: pytorch-external
   project: pytorch
   source:
     path: applications/jenkins-x86-slave
