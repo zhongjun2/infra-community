@@ -8,7 +8,7 @@ metadata:
 spec:
   destination:
     namespace: jenkins
-    server: https://159.138.57.217:5443
+    name: openlookeng-external
   project: openlookeng
   source:
     path: applications/jenkins

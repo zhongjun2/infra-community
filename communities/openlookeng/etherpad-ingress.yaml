@@ -8,7 +8,7 @@ metadata:
 spec:
   destination:
     namespace: etherpad
-    server: https://159.138.41.5:5443
+    name: openeuler-external
   project: openlookeng
   source:
     path: applications/openlookeng-etherpad
