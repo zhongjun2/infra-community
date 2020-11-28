@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: infrastructure-api-ingress
+  namespace: argocd
+  labels:
+    community: os-infra
+spec:
+  destination:
+    namespace: osinfra-api
+    name: in-cluster
+  project: infra-common
+  source:
+    path: common-applications/control/api
+    repoURL: https://github.com/opensourceways/infra-common.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
