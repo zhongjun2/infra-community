@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: mindspore-jenkins-master
+  namespace: argocd
+  labels:
+    community: mindspore-cn-north4
+spec:
+  destination:
+    namespace: jenkins-master
+    name: cn-north-4-x86-external
+  project: mindspore
+  source:
+    path: applications/jenkins-cn-north4
+    repoURL: https://github.com/opensourceways/infra-mindspore.git
+    targetRevision: HEAD
