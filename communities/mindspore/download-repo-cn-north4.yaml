@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: mindspore-cn-north4-repo-download
+  name: mindspore-cn-north4-repo-download-new
   namespace: argocd
   annotations:
     argocd.argoproj.io/sync-options: Validate=false
