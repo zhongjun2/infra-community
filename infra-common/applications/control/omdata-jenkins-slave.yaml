@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: control-jenkins-slave
+  namespace: argocd
+  labels:
+    community: os-infra
+spec:
+  destination:
+    namespace: jenkins
+    name: in-cluster
+  project: infra-common
+  source:
+    path: common-applications/control/jenkins-slave
+    repoURL: https://github.com/opensourceways/infra-common.git
+    targetRevision: HEAD
