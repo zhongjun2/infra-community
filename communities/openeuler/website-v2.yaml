@@ -17,5 +17,3 @@ spec:
     repoURL: https://github.com/opensourceways/infra-openeuler.git
     targetRevision: HEAD
   syncPolicy:
-    automated:
-      prune: false
