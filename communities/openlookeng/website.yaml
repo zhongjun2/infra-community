@@ -15,5 +15,3 @@ spec:
     repoURL: https://github.com/opensourceways/infra-openlookeng.git
     targetRevision: HEAD
   syncPolicy:
-    automated:
-      prune: true
