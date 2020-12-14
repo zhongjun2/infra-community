@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: mindspore-cn-north4-website
+  namespace: argocd
+  labels:
+    community: mindspore-cn-north4
+spec:
+  destination:
+    namespace: website
+    name: cn-north-4-x86-external
+  project: mindspore
+  source:
+    path: applications/website
+    repoURL: https://github.com/opensourceways/infra-mindspore.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
