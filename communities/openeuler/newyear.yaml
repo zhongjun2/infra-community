@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: openeuler-hk-newyear-events
+  namespace: argocd
+  labels:
+    community: openeuler-hk
+spec:
+  destination:
+    namespace: summary
+    name: openeuler-external
+  project: openeuler
+  source:
+    path: applications/newyear
+    repoURL: https://github.com/opensourceways/infra-openeuler.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
