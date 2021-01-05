@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ascend-om
+  namespace: argocd
+  labels:
+    community: os-infra
+spec:
+  destination:
+    namespace: ascend-om
+    name: om-external
+  project: infra-common
+  source:
+    path: common-applications/om/om-collect/ascend
+    repoURL: https://github.com/opensourceways/infra-common.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
